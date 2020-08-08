@@ -72,6 +72,14 @@ When the AVS private cloud completes deployment you will need a virtual machine 
 
 Here are instructions on how to create a [virtual machine in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal).  You will want to create this virtual machine in whatever vNet you have [identified and/or created as part of the deployment process](/production-ready-deployment-steps.md#azure-vnet-to-attach-avs).
 
+### Connect AVS to vNet with Express Route 
+If you did not define a vNet in the deployment step and your intent is to connect the AVS Express Route to an existing Express Route Gateway continue with this step, if you already defined a vNet in the deployment step then skip to the next section.
+
+Follow [steps 1-4 in this section](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-configure-networking#connect-expressroute-to-the-virtual-network-gateway), then come back to this tutorial.
+
+and you need intend to attach 
+... insert info here ...
+
 ### Create NSX Segment(s) in AVS
 ... insert info here ...
 
