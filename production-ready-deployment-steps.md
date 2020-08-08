@@ -68,21 +68,29 @@ Take the information you collected from the Planning section above and [deploy t
 ### Create AVS Jumpbox
 When the AVS private cloud completes deployment you will need a virtual machine in the vNet where AVS connects so you can reach vCenter and NSX.  Typically this jumpbox will not be needed once all the networking is configured (express route to/from on-premesis and global reach).  But until then it's a handy tool to have so you can reach vCenter and NSX in AVS.  
 
-Here are instructions on how to create a [virtual machine in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal).  You will want to create this virtual machine in whatever vNet you have [identified and/or created as part of the deployment process](/production-ready-deployment-steps.md#azure-vnet-to-attach-avs).
+Here are instructions on how to create a [virtual machine in Azure](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-access-private-cloud#create-a-new-windows-virtual-machine).  You will want to create this virtual machine in whatever vNet you have [identified and/or created as part of the deployment process](/production-ready-deployment-steps.md#azure-vnet-to-attach-avs).
 
 ### Connect AVS to vNet with Express Route 
 If you did not define a vNet in the [deployment step](/production-ready-deployment-steps.md/#deploy-avs) and your intent is to connect the AVS Express Route to an existing Express Route Gateway then follow [steps 1-4 in this section](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-configure-networking#connect-expressroute-to-the-virtual-network-gateway), then move to the next section.
 
 If you already defined a vNet in the [deployment step](/production-ready-deployment-steps.md/#deploy-avs) then skip to the next section.
 
-### Verify Network Connectivity From Azure vNet to AVS
+### Verify Network Routes Being Advertised From AVS to Azure vNet
 At this point you should have a jumpbox in the vNet where AVS connects via it's Express Route.  Go to that jumpbox's network interface in Azure and [view the effective routes](https://docs.microsoft.com/en-us/azure/virtual-network/manage-route-table#view-effective-routes).
 
 You should see in the effective route list the networks which were created as part of the AVS deployment.  You will see multiple /24 networks which were derived from the [/22 network you defined](/production-ready-deployment-steps.md#ip-address-segment-for-avs-platform) input during the [deployment step](/production-ready-deployment-steps.md/#deploy-avs)
 
-It will look something similar to this.
+It will look something similar to this.  Notice there are a series of /24 networks, these were all derived from the 10.74.72.0/22 network being input during the deployment, in this example.  
+
+If you see something similiar to this you should be able to connect to vCenter in AVS.
 
 ![](/effectiveroutes.png)
+
+### Connect and Log Into vCenter and NSX-T
+You will need to log into the jumpbox you created in the earlier step, when you haved logged into the jumpbox open a web browser and navigate to and log into both vCenter and NSX-T admin console.  
+
+You can identify the IP addresses and credentials of both vCenter and NSX-T admin console by [following the instructions here](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-access-private-cloud#connect-to-the-local-vcenter-of-your-private-cloud).
+
 
 ... insert info here ...
 
