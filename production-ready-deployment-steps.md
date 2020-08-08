@@ -13,7 +13,7 @@ This article outlines the workflow of an Azure VMware Solution (AVS) deployment.
 
 ### IP Address Segment for AVS Platform
 
-The first step in deploying AVS will be to plan out the IP segmentation.  AVS connects to your Azure vNet via an internal Express Route and (in most cases) will ultimately connect to your datacenter via Global Reach.  Express Route and Global Reach will be discussed later in detail.  Because AVS will see Azure vNet networks and on-premesis networks the network used for AVS deployment needs to be unique across these environments.  
+The first step in deploying AVS will be to plan out the IP segmentation.  AVS connects to your Azure vNet via an internal Express Route and (in most cases) will ultimately connect to your datacenter via Global Reach.  Express Route and Global Reach will be discussed later in detail.  Because AVS will see Azure vNet networks and on-premesis networks the network used for AVS deployment needs to be unique across these environments.  Identify a /22 network to be used.  
 
 [Please see this link for details](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-network-checklist#network-connectivity).  
 
@@ -65,19 +65,25 @@ Remember, this vNet will be seen by your on-premesis enviornment and AVS so make
 ### Deploy AVS
 Take the information you collected from the Planning section above and [deploy the AVS Private Cloud](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-create-private-cloud).
 
-While you are waiting for this step to complete, you can [create your jumpbox](/production-ready-deployment-steps.md#create-avs-jumpbox).
-
 ### Create AVS Jumpbox
 When the AVS private cloud completes deployment you will need a virtual machine in the vNet where AVS connects so you can reach vCenter and NSX.  Typically this jumpbox will not be needed once all the networking is configured (express route to/from on-premesis and global reach).  But until then it's a handy tool to have so you can reach vCenter and NSX in AVS.  
 
 Here are instructions on how to create a [virtual machine in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal).  You will want to create this virtual machine in whatever vNet you have [identified and/or created as part of the deployment process](/production-ready-deployment-steps.md#azure-vnet-to-attach-avs).
 
 ### Connect AVS to vNet with Express Route 
-If you did not define a vNet in the deployment step and your intent is to connect the AVS Express Route to an existing Express Route Gateway continue with this step, if you already defined a vNet in the deployment step then skip to the next section.
+If you did not define a vNet in the [deployment step](/production-ready-deployment-steps.md/#deploy-avs) and your intent is to connect the AVS Express Route to an existing Express Route Gateway then follow [steps 1-4 in this section](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-configure-networking#connect-expressroute-to-the-virtual-network-gateway), then move to the next section.
 
-Follow [steps 1-4 in this section](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-configure-networking#connect-expressroute-to-the-virtual-network-gateway), then come back to this tutorial.
+If you already defined a vNet in the [deployment step](/production-ready-deployment-steps.md/#deploy-avs) then skip to the next section.
 
-### Create NSX Segment(s) in AVS
+### Verify Network Connectivity From Azure vNet to AVS
+At this point you should have a jumpbox in the vNet where AVS connects via it's Express Route.  Go to that jumpbox's network interface in Azure and [view the effective routes](https://docs.microsoft.com/en-us/azure/virtual-network/manage-route-table#view-effective-routes).
+
+You should see in the effective route list the networks which were created as part of the AVS deployment.  You will see multiple /24 networks which were derived from the /22 network you defined input during the [deployment step](/production-ready-deployment-steps.md/#deploy-avs)
+
+
+... insert info here ...
+
+) in AVS
 ... insert info here ...
 
 ### Create DHCP Server and/or DHCP Relay
