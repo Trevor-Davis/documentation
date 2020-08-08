@@ -112,7 +112,7 @@ In the next steps you are going to be configuring either staticly a virtual mach
 If you have access to a DNS server you have already created somewhere in your enviornment, use that, if not identify the DNS server being used by your jumpbox and use that same DNS server.
 
 ### Provide DHCP Services to NSX-T Network Segment (Optional)
-If you want to use DHCP on your NSX-T segment(s), follow the guidance in this step, if not, skip to XXXXXXXXXXXXXXXX.  
+If you want to use DHCP on your NSX-T segment(s), follow the guidance in this step, if not, skip to the [next section](production-ready-deployment-steps.md#put-a-virtual-machine-on-the-nsx-t-network-segment).  
 
 Now that you have created your NSX-T network segment in AVS you can either leverage NSX-T as a DHCP Server or you can relay DHCP requests from the NSX-T segment(s) to a DHCP server somewhere else in your environment.
 
