@@ -92,14 +92,16 @@ You will need to log into the jumpbox you created in the earlier step, when you 
 You can identify the IP addresses and credentials of both vCenter and NSX-T admin console by [following the instructions here](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-access-private-cloud#connect-to-the-local-vcenter-of-your-private-cloud).
 
 ### Create a Network Segment on AVS
-If you plan on creating new network segments in your AVS environment you will need to create those via NSX-T.  In the planning section you may have defined which networks you are going to create in AVS, you can create those now.  If you didn't already decide which networks you are going to create you can do that now.  Just like on-premesis you are going to want to define a CIDR block of your choice which does not overlap with anything in Azure or on-premesis.  If you are not planning on connecting AVS back to your on-premesis enviornment, still, don't overlap the networks, you never know down the road if you will connect them.
+If you plan on creating new network segments in your AVS environment you will need to create those via NSX-T.  In the planning section you may have defined which networks you are going to create in AVS, you can create those now.  If you didn't already decide which networks you are going to create do that now.  
+
+Just like on-premesis you are going to want to define a CIDR block of your choice which does not overlap with anything in Azure or on-premesis.  If you are not planning on connecting AVS back to your on-premesis enviornment, still, don't overlap the networks, you never know down the road if you will connect them.
 
 Follow [these instructions](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-nsx-t-network-segment) to create an AVS network segment.
 
+### Verify NSX-T Segment is Advertised
+Re-do the [Verify Network Routes Being Advertised From AVS to Azure vNet](/production-ready-deployment-steps.md#verify-network-routes-being-advertised-from-avs-to-azure-vnet). 
 
-
-
-
+But now you should see an additional route in the list, you should see the network segment(s) you just created in the previous step.
 
 
 ### Create DHCP Server and/or DHCP Relay
