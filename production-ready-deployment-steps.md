@@ -10,6 +10,7 @@ ms.author: tredavis
 This article outlines the workflow of an Azure VMware Solution (AVS) deployment. The final result will be a production ready environment.
 
 ## Planning
+In this section you will be only collecting data to use in following steps.
 
 ### IP Address Segment for AVS Platform
 
