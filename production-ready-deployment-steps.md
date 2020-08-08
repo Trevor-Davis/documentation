@@ -128,11 +128,9 @@ Do this as you would in any vSphere environment.  Attach this VM to the/one of t
 ### Test NSX-T Segment Connectivity 
 Log into the virtual machine you created in teh previous step.  Verify connectivity from your AVS network(s) to the Internet, to Azure vNet(s) and to on-premesis.  To do this complete the following steps;
 
-Ping an IP on the internet.
-
-Go to an Internet site via web browser.
-
-Ping the Jumpbox which sits on the Azure vNet.
+1. Ping an IP on the internet.
+2. Go to an Internet site via web browser.
+3. Ping the Jumpbox which sits on the Azure vNet.
 
 ---
 
