@@ -82,7 +82,7 @@ You should see in the effective route list the networks which were created as pa
 
 It will look something similar to this.
 
-!(/effectiveroutes.png)
+![](/effectiveroutes.png)
 
 ... insert info here ...
 
