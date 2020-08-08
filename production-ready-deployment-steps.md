@@ -67,7 +67,7 @@ Remember, this vNet will be seen by your on-premises environment and AVS so make
 ## Deployment and Configuration of AVS Platform
 
 ### Deploy AVS
-Take the information you collected from the Planning section above and [deploy the AVS Private Cloud](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-create-private-cloud).
+Take the information you collected from the [Planning section](/production-ready-deployment-steps.md#planning) above and [deploy the AVS Private Cloud](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-create-private-cloud).
 
 ### Create AVS Jumpbox
 When the AVS private cloud completes deployment you will need a virtual machine in the vNet where AVS connects so you can reach vCenter and NSX.  Typically this jumpbox will not be needed once all the networking is configured (express route to/from on-premises and global reach).  But until then it is a handy tool to have so you can reach vCenter and NSX in AVS.  
