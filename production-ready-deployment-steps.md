@@ -131,8 +131,11 @@ Go to an Internet site via web browser.
 
 Ping the Jumpbox which sits on the Azure vNet.
 
+
 > [!NOTE]
 > At this point AVS is up and running and you have successfully established connectivity to/from Azure vNets and the Internet. 
+
+
 
 ### Configure Azure Global Reach To Connect AVS to On-Premesis
 ... insert info here ...
