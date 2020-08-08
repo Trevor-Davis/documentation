@@ -135,6 +135,7 @@ Ping the Jumpbox which sits on the Azure vNet.
 > An AVS admin must not modify the configuration of NSX-T Edge or Tier-0 Gateway. This may result in a loss of service.
 
 
+
 > At this point AVS is up and running and you have successfully established connectivity to/from Azure vNets and the Internet. 
 
 
