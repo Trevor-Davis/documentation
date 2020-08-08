@@ -131,8 +131,8 @@ Go to an Internet site via web browser.
 
 Ping the Jumpbox which sits on the Azure vNet.
 
-** --- **
-** --- ** 
+**---**
+**---** 
 
 > [!IMPORTANT]
 > An AVS admin must not modify the configuration of NSX-T Edge or Tier-0 Gateway. This may result in a loss of service.
