@@ -60,8 +60,10 @@ If you want to connect the Express Route from AVS to an existing Express Route G
 
 Take the information you collected from the Planning section above and [deploy the AVS Private Cloud](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-create-private-cloud).
 
+While you are waiting for that to complete, you can complete the next section, [Create AVS Jumpbox](/production-ready-deployment-steps.md#create-avs-jumpbox).
+
 ### Create AVS Jumpbox
-... insert info here ...
+
 
 ### Create NSX Segment(s) in AVS
 ... insert info here ...
