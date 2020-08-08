@@ -103,6 +103,11 @@ Re-do the [Verify Network Routes Being Advertised From AVS to Azure vNet](/produ
 
 But now you should see an additional route in the list, you should see the network segment(s) you just created in the previous step.
 
+### Identify DNS Server
+In the next steps you are going to be configuring either staticly a virtual machine on the NSX-T segment or assigning IP addresses via DHCP to that virtual machine, either way, you are going to need to have a DNS server identified.  You can use a DNS server in your environment which is accessible, but that this point you may not have access to the DNS server in your environment because Global Reach has not been configured.  
+
+If you have access to a DNS server you have already created somewhere in your enviornment, use that, if not identify the DNS server being used by your jumpbox and use that same DNS server.
+
 ### Provide DHCP Services to NSX-T Network Segment (Optional)
 If you want to use DHCP on your NSX-T segment(s), follow the guidance in this step, if not, skip to XXXXXXXXXXXXXXXX.  
 
@@ -112,24 +117,15 @@ If you want to use NSX-T as the DHCP Server for the segment(s) you just created,
 
 If you want to relay DHCP requests to a DHCP server somewhere in your environment which you have built or already have, then [only do the relay configuration](https://docs.microsoft.com/en-us/azure/azure-vmware/manage-dhcp#create-dhcp-relay-service).
 
-
-
- this step and this step.
-
-follow the guidance here.
-
-
-   In your AVS vCenter you will want to deploy a VM, you will use this VM to verify connectivity from your AVS network(s) to the Internet, to Azure vNet(s) and to on-premesis.
-
-Do this as you would in any vSphere environment.  Attach this VM to the/one of the networks which you just created in NSX-T.
-
-
-
-
 ### Put a Virtual Machine On the NSX-T Network Segment
-In your AVS vCenter you will want to deploy a VM, you will use this VM to verify connectivity from your AVS network(s) to the Internet, to Azure vNet(s) and to on-premesis.
+In your AVS vCenter you will want to deploy a VM, you will use this VM to verify connectivity from your AVS network(s) to the Internet, to Azure vNet(s) and later to on-premesis.
 
-Do this as you would in any vSphere environment.  Attach this VM to the/one of the networks which you just created in NSX-T.
+Do this as you would in any vSphere environment.  Attach this VM to the/one of the networks which you just created in NSX-T.  If you setup DHCP in the previous step you will get your network configuration for that VM from that DHCP server (don't forget to setup the scope), and if you are going to staticly configure, then just configure as you normally would.
+
+After getting the machine up log into that machine and do the following;
+Ping an IP on the internet.
+Go to an Internet site via web browser.
+Ping the Jumpbox which sits on the Azure vNet.
 
 
 
