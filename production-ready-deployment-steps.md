@@ -70,7 +70,7 @@ While you are waiting for this step to complete, you can [create your jumpbox](/
 ### Create AVS Jumpbox
 When the AVS private cloud completes deployment you will need a virtual machine in the vNet where AVS connects so you can reach vCenter and NSX.  Typically this jumpbox will not be needed once all the networking is configured (express route to/from on-premesis and global reach).  But until then it's a handy tool to have so you can reach vCenter and NSX in AVS.  
 
-Here are instructions on how to create a virtual machine in Azure.  You will want to create this virtual machine in whatever vNet you have [identified and/or created as part of the deployment process](/production-ready-deployment-steps.md#azure-vnet-to-attach-avs).
+Here are instructions on how to create a [virtual machine in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal).  You will want to create this virtual machine in whatever vNet you have [identified and/or created as part of the deployment process](/production-ready-deployment-steps.md#azure-vnet-to-attach-avs).
 
 ### Create NSX Segment(s) in AVS
 ... insert info here ...
