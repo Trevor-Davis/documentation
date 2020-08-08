@@ -137,10 +137,12 @@ Ping the Jumpbox which sits on the Azure vNet.
 
 --- 
 
+## Connect AVS to Your On-Premesis Environment
+To do this there are two pre-requistes, you have established connectivity to/from AVS and Azure vNets.  If you have gotten this far, this should be complete.  The second prerequisite is to have an Express Route from your on-premesis environment to Azure.  
 
+NOTE: You can connect via VPN, but that is out of scope for this kickstart document.
 
-
-### Configure Azure Global Reach To Connect AVS to On-Premesis
+onfigure Azure Global Reach To Connect AVS to On-Premesis
 ... insert info here ...
 
 ## Deployment and Configuration of HCX for Network Extension and/or Workload Migration
