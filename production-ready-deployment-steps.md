@@ -99,9 +99,43 @@ Just like on-premesis you are going to want to define a CIDR block of your choic
 Follow [these instructions](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-nsx-t-network-segment) to create an AVS network segment.
 
 ### Verify NSX-T Segment is Advertised
-Re-do the [Verify Network Routes Being Advertised From AVS to Azure vNet](/production-ready-deployment-steps.md#verify-network-routes-being-advertised-from-avs-to-azure-vnet). 
+Re-do the [Verify Network Routes Being Advertised From AVS to Azure vNet](/production-ready-deployment-steps.md#verify-network-routes-being-advertised-from-avs-to-azure-vnet) step. 
 
 But now you should see an additional route in the list, you should see the network segment(s) you just created in the previous step.
+
+### Provide DHCP Services to NSX-T Network Segment (Optional)
+If you want to use DHCP on your NSX-T segment(s), follow the guidance in this step, if not, skip to XXXXXXXXXXXXXXXX.  
+
+Now that you have created your NSX-T network segment in AVS you can either leverage NSX-T as a DHCP Server or you can relay DHCP requests from the NSX-T segment(s) to a DHCP server somewhere else in your environment.
+
+If you want to use NSX-T as the DHCP Server for the segment(s) you just created, you will want to [create a DHCP server in NSX-T](https://docs.microsoft.com/en-us/azure/azure-vmware/manage-dhcp#create-dhcp-server) and [relay to that server](https://docs.microsoft.com/en-us/azure/azure-vmware/manage-dhcp#create-dhcp-relay-service).
+
+If you want to relay DHCP requests to a DHCP server somewhere in your environment which you have built or already have, then [only do the relay configuration](https://docs.microsoft.com/en-us/azure/azure-vmware/manage-dhcp#create-dhcp-relay-service).
+
+
+
+ this step and this step.
+
+follow the guidance here.
+
+
+   In your AVS vCenter you will want to deploy a VM, you will use this VM to verify connectivity from your AVS network(s) to the Internet, to Azure vNet(s) and to on-premesis.
+
+Do this as you would in any vSphere environment.  Attach this VM to the/one of the networks which you just created in NSX-T.
+
+
+
+
+### Put a Virtual Machine On the NSX-T Network Segment
+In your AVS vCenter you will want to deploy a VM, you will use this VM to verify connectivity from your AVS network(s) to the Internet, to Azure vNet(s) and to on-premesis.
+
+Do this as you would in any vSphere environment.  Attach this VM to the/one of the networks which you just created in NSX-T.
+
+
+
+
+### Test NSX-T Segment Connectivity 
+Log into the virtual machine you created in teh previous step.  Verify connectivity from your AVS network(s) to the Internet, to Azure vNet(s) and to on-premesis.
 
 
 ### Create DHCP Server and/or DHCP Relay
