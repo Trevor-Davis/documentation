@@ -7,7 +7,7 @@ ms.author: tredavis
 ---
 # Azure VMware Solution (AVS) Deployment
 
-This article outlines the workflow of an Azure VMware Solution (AVS) deployment. The final result will be a production ready environment ready for VM creation and migration.
+This article outlines the workflow of an Azure VMware Solution (AVS) deployment. The final result will be a production ready environment.
 
 ## Planning
 
@@ -24,6 +24,9 @@ You can create new network segments in AVS.  Like the IP addressing for the plat
 ### ID Networks Which Will Be Extended to AVS From On-Premesis (Optional)
 
 You may choose to extend network segments from on-premesis.  If you are planning on extending networks from on-premesis those networks must connected to a [vSphere Distributed Switch](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-B15C6A13-797E-4BCB-B9D9-5CBC5A60C3A6.html) in your on-premesis VMware environment.  If the network(s) you will be extending live on a [vSphere Standard Switch](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-350344DE-483A-42ED-B0E2-C811EE927D59.html) they cannot be extended.  It's important to note than you can create new networks segments in AVS and/or extend network segments from on-premesis.
+
+### Global Reach Peering
+A /29 non-overlapping network address block for the ExpressRoute Global Reach peering.
 
 ### Subscription
 The subscription you plan to use for the deployment.  You can either create a new subscription or re-use an existing one.
@@ -138,13 +141,23 @@ Ping the Jumpbox which sits on the Azure vNet.
 --- 
 
 ## Connect AVS to Your On-Premesis Environment
-To do this there are two pre-requistes, you have established connectivity to/from AVS and Azure vNets.  If you have gotten this far, this should be complete.  The second prerequisite is to have an Express Route from your on-premesis environment to Azure.  
+To do this there are [three pre-requistes](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud#prerequisites) - 
+
+1. You have established connectivity to/from AVS and Azure vNets.  If you have gotten this far, this should be complete.  
+2. Have an Express Route from your on-premesis environment to Azure.
+3. A /29 non-overlapping network address block for the ExpressRoute Global Reach peering (you should have [defined this already](/production-ready-deployment-steps.md/#global-reach-peering) as part of the planning phase).
 
 **NOTE:** You can connect via VPN, but that is out of scope for this kickstart document.
 
+### Establish Global Reach Connection
+Follow [these instructions](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud) to establish on-premesis connectivity to/from AVS by configuring Global Reach.
 
+### Verify On-Premesis Network Connectivity
+You should now see in your on-premesis edge router where the Express Route connects the NSX-T network segments and the AVS management segments in the route tables.
 
+Everyone's environment will be different, some need to allow these routes to propogate back into the greater on-premesis network, some will not.  Some will have firewalls protecting the Express Route, some will not.  Assuming no firewalls and no route pruning is occuring you should at this point be able to ping from your on-premsis enviornment the vCenter server in AVS and the [virtual machine](/production-ready-deployment-steps.md/#put-a-virtual-machine-on-the-nsx-t-network-segment) you put on the NSX-T segment.  
 
+Additionally, from the virtual machine on the NSX-T segment you shoudl be able to reach resources in your on-premesis environment.
 
 
 ## Deployment and Configuration of HCX for Network Extension and/or Workload Migration
