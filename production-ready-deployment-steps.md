@@ -123,15 +123,9 @@ In your AVS vCenter you will want to deploy a VM, you will use this VM to verify
 Do this as you would in any vSphere environment.  Attach this VM to the/one of the networks which you just created in NSX-T.  If you setup DHCP in the previous step you will get your network configuration for that VM from that DHCP server (don't forget to setup the scope), and if you are going to staticly configure, then just configure as you normally would.
 
 After getting the machine up log into that machine and do the following - 
-
 Ping an IP on the internet.
-
 Go to an Internet site via web browser.
-
 Ping the Jumpbox which sits on the Azure vNet.
-
-
-
 
 ### Test NSX-T Segment Connectivity 
 Log into the virtual machine you created in teh previous step.  Verify connectivity from your AVS network(s) to the Internet, to Azure vNet(s) and to on-premesis.
