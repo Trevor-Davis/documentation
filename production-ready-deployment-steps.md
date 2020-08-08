@@ -77,9 +77,6 @@ If you did not define a vNet in the deployment step and your intent is to connec
 
 Follow [steps 1-4 in this section](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-configure-networking#connect-expressroute-to-the-virtual-network-gateway), then come back to this tutorial.
 
-and you need intend to attach 
-... insert info here ...
-
 ### Create NSX Segment(s) in AVS
 ... insert info here ...
 
