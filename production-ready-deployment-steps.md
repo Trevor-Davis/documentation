@@ -78,8 +78,11 @@ If you already defined a vNet in the [deployment step](/production-ready-deploym
 ### Verify Network Connectivity From Azure vNet to AVS
 At this point you should have a jumpbox in the vNet where AVS connects via it's Express Route.  Go to that jumpbox's network interface in Azure and [view the effective routes](https://docs.microsoft.com/en-us/azure/virtual-network/manage-route-table#view-effective-routes).
 
-You should see in the effective route list the networks which were created as part of the AVS deployment.  You will see multiple /24 networks which were derived from the /22 network you defined input during the [deployment step](/production-ready-deployment-steps.md/#deploy-avs)
+You should see in the effective route list the networks which were created as part of the AVS deployment.  You will see multiple /24 networks which were derived from the [/22 network you defined](/production-ready-deployment-steps.md#ip-address-segment-for-avs-platform) input during the [deployment step](/production-ready-deployment-steps.md/#deploy-avs)
 
+It will look something similar to this.
+
+(effectiveroutes.png)
 
 ... insert info here ...
 
