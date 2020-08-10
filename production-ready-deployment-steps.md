@@ -31,6 +31,8 @@ A /29 non-overlapping network address block for the ExpressRoute Global Reach pe
 ### Subscription
 The subscription you plan to use for the deployment.  You can either create a new subscription or re-use an existing one.
 
+NOTE: This subscription must be associated with a Microsoft Enterprise Agreement.
+
 ### Resource Group
 Generally, a new resource group will be created for AVS and it is supporting Azure components, but this is not a requirement.
 
@@ -65,8 +67,13 @@ Remember, this vNet will be seen by your on-premises environment and AVS so make
 
 ## Deployment and Configuration of AVS Platform
 
+### Register the AVS Resource Provider
+Follow [the steps shown in this link](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-create-private-cloud#register-the-resource-provider) to register the resource provider for AVS with your subscription.
+
 ### Deploy AVS
 Take the information you collected from the [Planning section](/production-ready-deployment-steps.md#planning) above and [deploy the AVS Private Cloud](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-create-private-cloud).
+
+NOTE: The person deploying AVS must be at minimum contributor level in the subscription.
 
 ### Create AVS Jumpbox
 When the AVS private cloud completes deployment you will need a virtual machine in the vNet where AVS connects so you can reach vCenter and NSX.  Typically this jumpbox will not be needed once all the networking is configured (express route to/from on-premises and global reach).  But until then it is a handy tool to have so you can reach vCenter and NSX in AVS.  
