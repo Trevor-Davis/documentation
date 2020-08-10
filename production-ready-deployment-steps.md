@@ -33,7 +33,7 @@ A /29 non-overlapping network address block for the ExpressRoute Global Reach pe
 ### Subscription
 The subscription you plan to use for the deployment.  You can either create a new subscription or re-use an existing one.
 
-NOTE: This subscription must be associated with a Microsoft Enterprise Agreement.
+**NOTE:** This subscription must be associated with a Microsoft Enterprise Agreement.
 
 ### Resource Group
 Generally, a new resource group will be created for AVS and it is supporting Azure components, but this is not a requirement.
@@ -74,7 +74,7 @@ Follow [the steps shown in this link](https://docs.microsoft.com/en-us/azure/azu
 ### Deploy AVS
 Take the information you collected from the [Planning section](/production-ready-deployment-steps.md#planning) above and [deploy the AVS Private Cloud](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-create-private-cloud).
 
-NOTE: The person deploying AVS must be at minimum contributor level in the subscription.
+**NOTE:** The person deploying AVS must be at minimum contributor level in the subscription.
 
 ### Create AVS Jumpbox
 
