@@ -11,7 +11,7 @@ This article outlines the workflow of an Azure VMware Solution (AVS) deployment.
 ## Planning
 In this section you will be collecting data to use in subsequent steps.  
 
-If you would like you can [download this file](/documentation/avs-pre-deployment-checklist.docx) so you can document all the information collected in this planning phase.  
+If you would like you can [download this file](/documentation/blob/master/avs-pre-deployment-checklist.docx) so you can document all the information collected in this planning phase.  
 
 ### IP Address Segment for AVS Platform
 
