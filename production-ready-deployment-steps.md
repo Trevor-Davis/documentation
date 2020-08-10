@@ -62,7 +62,6 @@ If you want to connect the Express Route from AVS to an existing Express Route G
 So in summary, do you want to connect AVS to an existing Express Route Gateway?  
 Yes = Do not fill in this section.  
 No = either identify an existing vNet or create a new vNet.
-
 Remember, this vNet will be seen by your on-premises environment and AVS so make sure whatever IP segment is used in this vNet and subnets do not overlap.
 
 ## Deployment and Configuration of AVS Platform
@@ -76,6 +75,7 @@ Take the information you collected from the [Planning section](/production-ready
 NOTE: The person deploying AVS must be at minimum contributor level in the subscription.
 
 ### Create AVS Jumpbox
+
 When the AVS private cloud completes deployment you will need a virtual machine in the vNet where AVS connects so you can reach vCenter and NSX.  Typically this jumpbox will not be needed once all the networking is configured (express route to/from on-premises and global reach).  But until then it is a handy tool to have so you can reach vCenter and NSX in AVS.  
 
 Here are instructions on how to create a [virtual machine in Azure](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-access-private-cloud#create-a-new-windows-virtual-machine).  You will want to create this virtual machine in whatever vNet you have [identified and/or created as part of the deployment process](/production-ready-deployment-steps.md#azure-vnet-to-attach-avs).
