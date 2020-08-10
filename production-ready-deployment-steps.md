@@ -11,6 +11,8 @@ This article outlines the workflow of an Azure VMware Solution (AVS) deployment.
 ## Planning
 In this section you will be collecting data to use in subsequent steps.
 
+If you would like you can [download this file](/documentation/AVS-Pre-Deployment-Checklist.docx) so you can document all the information collected in this planning phase.  
+
 ### IP Address Segment for AVS Platform
 
 The first step in deploying AVS will be to plan out the IP segmentation.  AVS connects to your Azure vNet via an internal Express Route and (in most cases) will ultimately connect to your datacenter via Global Reach.  Express Route and Global Reach will be discussed later in detail.  Because AVS will see Azure vNet networks and on-premises networks the network used for AVS deployment needs to be unique across these environments.  Identify a /22 network to be used.  
