@@ -9,7 +9,7 @@ ms.author: tredavis
 This article outlines the workflow of an Azure VMware Solution (AVS) deployment. The final result will be a production ready environment.
 
 ## Planning
-In this section you will be collecting data to use in subsequent steps.  
+In this section you will be collecting data to use in subsequent steps.
 
 If you would like you can [download this file](/documentation/AVS-Pre-Deployment-Checklist.docx) so you can document all the information collected in this planning phase.  
 
