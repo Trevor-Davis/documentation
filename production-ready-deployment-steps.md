@@ -13,21 +13,24 @@ In this section you will be collecting data to use in subsequent steps.
 
 If you would like you can [download this file](https://github.com/tredavismicrosoft/documentation/raw/master/avs-pre-deployment-checklist.docx) so you can document all the information collected in this planning phase.  
 
-### IP Address Segment for AVS Platform
+### Identify - IP Address Segment for AVS Platform
 
-The first step in deploying AVS will be to plan out the IP segmentation.  AVS connects to your Azure vNet via an internal Express Route and (in most cases) will ultimately connect to your datacenter via Global Reach.  Express Route and Global Reach will be discussed later in detail.  Because AVS will see Azure vNet networks and on-premises networks the network used for AVS deployment needs to be unique across these environments.  Identify a /22 network to be used.  
+The first step in deploying AVS will be to plan out the IP segmentation.  AVS connects to your Azure vNet via an internal Express Route and (in most cases) will ultimately connect to your datacenter via Global Reach.  Express Route and Global Reach will be discussed later in detail.  Because AVS will see Azure vNet networks and on-premises networks the network used for AVS deployment needs to be unique across these environments.  Identify a /22 network to be used (ex. 10.0.0.0/22) 
 
 [Please see this link for details](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-network-checklist#network-connectivity).  
 
-### IP Address Segment for VM Workloads in AVS (Optional)
+### Identify - IP Address Segment for VM Workloads in AVS
 
-You can create new network segments in AVS.  Like the IP addressing for the platform, any IP segments you create in AVS need to be unique across your Azure and on-premises footprint.  If you are planning to create new IP segments in AVS make note of those.  You may not be planning to create new segments if you are only extending on-premises networks (discussed in the next section).  It is important to note than you can create new networks segments in AVS and/or extend network segments from on-premises. 
+Like the IP addressing for the platform, any IP segments you create in AVS need to be unique across your Azure and on-premises footprint.  
 
-### ID Networks Which Will Be Extended to AVS From On-Premises (Optional)
+Identify a IP segment (ex. 10.0.4.0/24) which you will use to create your first network (NSX Segment) in your AVS private cloud.
 
-You may choose to extend network segments from on-premises.  If you are planning on extending networks from on-premises those networks must connected to a [vSphere Distributed Switch](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-B15C6A13-797E-4BCB-B9D9-5CBC5A60C3A6.html) in your on-premises VMware environment.  If the network(s) you will be extending live on a [vSphere Standard Switch](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-350344DE-483A-42ED-B0E2-C811EE927D59.html) they cannot be extended.  It is important to note than you can create new networks segments in AVS and/or extend network segments from on-premises.
+### Identify - Networks Which Will Be Extended to AVS From On-Premises (Optional)
 
-### Global Reach Peering
+You may choose to extend network segments from on-premises.  If you are planning on extending networks from on-premises those networks must connected to a [vSphere Distributed Switch](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-B15C6A13-797E-4BCB-B9D9-5CBC5A60C3A6.html) in your on-premises VMware environment.  If the network(s) you will be extending live on a [vSphere Standard Switch](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-350344DE-483A-42ED-B0E2-C811EE927D59.html) they cannot be extended.  
+
+
+### Identify - Global Reach Peering Network
 A /29 non-overlapping network address block for the ExpressRoute Global Reach peering.
 
 ### Subscription
