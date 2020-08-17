@@ -15,7 +15,8 @@ If you would like you can [download this file](https://github.com/tredavismicros
 
 ### IP Address Segment for AVS Platform
 
-The first step in deploying AVS will be to plan out the IP segmentation.  AVS connects to your Azure vNet via an internal Express Route and (in most cases) will ultimately connect to your datacenter via Global Reach.  Express Route and Global Reach will be discussed later in detail.  Because AVS will see Azure vNet networks and on-premises networks the network used for AVS deployment needs to be unique across these environments.  Identify a /22 network to be used.  
+The first step in deploying AVS will be to plan out the IP segmentation.  
+AVS connects to your Azure vNet via an internal Express Route and (in most cases) will ultimately connect to your datacenter via Global Reach.  Express Route and Global Reach will be discussed later in detail.  Because AVS will see Azure vNet networks and on-premises networks the network used for AVS deployment needs to be unique across these environments.  Identify a /22 network to be used.  
 
 [Please see this link for details](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-network-checklist#network-connectivity).  
 
