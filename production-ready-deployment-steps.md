@@ -23,13 +23,15 @@ AVS connects to your Azure vNet via an internal Express Route and (in most cases
 
 What you need to be aware of is that AVS, your existing Azure environment and your on-premesis enviornment will all exchange routes (typically). That being the case you will need to ID a /22 network to input during the AVS deployment which does not overlap anything you already have on-premesis or in Azure.
 
+**Example:** 10.0.0.0/22
+
 [Please see this link for details](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-network-checklist#network-connectivity).  
 
 ![](/privatecloud-1.png)
 
 ### Identify - IP Address Segment for VM Workloads in AVS
 
-Like the IP addressing for the platform, any IP segments you create in AVS need to be unique across your Azure and on-premises footprint.  
+Any IP segments you create in AVS need to be unique across your Azure and on-premises footprint.  
 
 Identify a IP segment (ex. 10.0.4.0/24) which you will use to create your first network (NSX Segment) in your AVS private cloud.
 
