@@ -25,6 +25,9 @@ What you need to be aware of is that AVS, your existing Azure environment and yo
 
 [Please see this link for details](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-network-checklist#network-connectivity).  
 
+![](/effectiveroutes.png)
+blah blah blah
+
 ### Identify - IP Address Segment for VM Workloads in AVS
 
 Like the IP addressing for the platform, any IP segments you create in AVS need to be unique across your Azure and on-premises footprint.  
