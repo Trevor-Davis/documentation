@@ -29,6 +29,8 @@ What you need to be aware of is that AVS, your existing Azure environment and yo
 
 ![](/privatecloud--1.png)
 
+---
+
 ### Identify - IP Address Segment for VM Workloads in AVS
 
 Any IP segments you create in AVS need to be unique across your Azure and on-premises footprint.  
