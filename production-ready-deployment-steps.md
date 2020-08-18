@@ -12,7 +12,7 @@ This article outlines the workflow of an Azure VMware Solution (AVS) deployment.
 In this section you will be collecting data to use in subsequent steps.  
 
 If you would like you can [download this file](https://github.com/tredavismicrosoft/documentation/raw/master/avs-pre-deployment-checklist.docx) so you can document all the information collected in this planning phase.  
-
+ 
 ### Identify - IP Address Segment for AVS Platform
 
 The first step in deploying AVS will be to plan out the IP segmentation.  
