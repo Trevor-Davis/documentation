@@ -25,8 +25,7 @@ What you need to be aware of is that AVS, your existing Azure environment and yo
 
 [Please see this link for details](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-network-checklist#network-connectivity).  
 
-![](/effectiveroutes.png)
-blah blah blah
+![](/privatecloud.png)
 
 ### Identify - IP Address Segment for VM Workloads in AVS
 
