@@ -3,7 +3,7 @@ title: Production Ready Deployment of Azure VMware Solution
 description: This article outlines the workflow of an Azure VMware Solution (AVS) deployment.  The final result will be an environment ready for VM creation and migration.
 ms.topic: conceptual
 ms.date: 08/04/2020
-ms.author: tredavis
+ms.author: tredavis 
 ---
 # Azure VMware Solution (AVS) Deployment
 This article outlines the workflow of an Azure VMware Solution (AVS) deployment. The final result will be a production ready environment.
