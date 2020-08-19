@@ -119,6 +119,13 @@ Either way, document what you want to do in this step.
 
 ![](/avsexr.png)
 
+## Next steps
+
+Once you have the proper networking in place, continue to the next tutorial to create your AVS private cloud.
+
+> [!div class="nextstepaction"]
+> [Tutorial: Deploy AVS](avs-deployment.md)
+
 ## Deployment and Configuration of AVS Platform
 In this section we will be taking the information collected [in the previous section](/production-ready-deployment-steps.md#planning) and using it to depoloy the Azure VMware Solution Private Cloud.
 
