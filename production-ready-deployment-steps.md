@@ -121,7 +121,7 @@ Either way, document what you want to do in this step.
 
 ## Next steps
 
-Once you have the proper networking in place, continue to the next tutorial to create your AVS private cloud.
+Now that all the needed information is documented/gathered, continue to the next section to create your AVS private cloud.
 
 > [!div class="nextstepaction"]
 > [Tutorial: Deploy AVS](avs-deployment.md)
