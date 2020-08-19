@@ -35,7 +35,9 @@ What you need to be aware of is that AVS, your existing Azure environment and yo
 
 Any IP segments you create in AVS need to be unique across your Azure and on-premises footprint.  
 
-Identify a IP segment (ex. 10.0.4.0/24) which you will use to create your first network (NSX Segment) in your AVS private cloud.
+Identify a IP segment which you will use to create your first network (NSX Segment) in your AVS private cloud.
+
+**Example:** 10.0.4.0/24
 
 ![](/privatecloud--2.png)
 
@@ -43,11 +45,18 @@ Identify a IP segment (ex. 10.0.4.0/24) which you will use to create your first 
 
 ### Identify - Networks Which Will Be Extended to AVS From On-Premises (Optional)
 
-You may choose to extend network segments from on-premises.  If you are planning on extending networks from on-premises those networks must connected to a [vSphere Distributed Switch](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-B15C6A13-797E-4BCB-B9D9-5CBC5A60C3A6.html) in your on-premises VMware environment.  If the network(s) you will be extending live on a [vSphere Standard Switch](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-350344DE-483A-42ED-B0E2-C811EE927D59.html) they cannot be extended.  
+You may choose to extend network segments from on-premises to AVS.  If you are planning on extending networks from on-premises those networks must connected to a [vSphere Distributed Switch](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-B15C6A13-797E-4BCB-B9D9-5CBC5A60C3A6.html) in your on-premises VMware environment.  If the network(s) you will be extending live on a [vSphere Standard Switch](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-350344DE-483A-42ED-B0E2-C811EE927D59.html) they cannot be extended.  
 
+---
 
 ### Identify - Global Reach Peering Network
-A /29 non-overlapping network address block for the ExpressRoute Global Reach peering.
+A /29 non-overlapping network address block for the ExpressRoute Global Reach peering.  The IPs in this segment will be used at each end of the Global Reach connection for purposes of connecting the two Express Routes.
+
+**Example:** 10.1.0.0/29
+
+![](/privatecloud--3.png)
+
+---
 
 ### Subscription
 The subscription you plan to use for the deployment.  You can either create a new subscription or re-use an existing one.
