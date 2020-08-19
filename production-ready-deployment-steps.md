@@ -58,25 +58,37 @@ A /29 non-overlapping network address block for the ExpressRoute Global Reach pe
 
 ---
 
-### Subscription
+### Identify - Subscription
 The subscription you plan to use for the deployment.  You can either create a new subscription or re-use an existing one.
 
 **NOTE:** This subscription must be associated with a Microsoft Enterprise Agreement.
 
-### Resource Group
+---
+
+### Identify - Resource Group
 Generally, a new resource group will be created for AVS and it is supporting Azure components, but this is not a requirement.
 
-### Region
+---
+
+### Identify - Region
 Identify which region you want AVS deployed, please see the [Azure Products Available By Region Guide](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=azure-vmware-cloudsimple).
 
-### Resource Name
-This is a friendly name which you will call your AVS private cloud.
+---
 
-### Size Nodes
-Identify which size nodes you want to build out your AVS with.  [See AVS documentation for a complete list](https://docs.microsoft.com/en-us/azure/azure-vmware/concepts-private-clouds-clusters#hosts).
+### Identify - Resource Name
+This is a friendly name which you will title your AVS private cloud.
+
+---
+
+### Identify - Size Nodes
+Which size nodes you want to build out your AVS with.  [See AVS documentation for a complete list](https://docs.microsoft.com/en-us/azure/azure-vmware/concepts-private-clouds-clusters#hosts).
+
+---
 
 ### Number of Hosts
 How many hosts will you build out the AVS cluster with.  The minimum node count is 3, maximum is 16 per cluster.  See [this link](https://docs.microsoft.com/en-us/azure/azure-vmware/concepts-private-clouds-clusters#clusters) for more details.
+
+---
 
 ### vCenter Admin Password
 During the deployment you will be prompted to define the vCenter admin password.
