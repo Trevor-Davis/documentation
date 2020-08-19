@@ -85,16 +85,20 @@ Which size nodes you want to build out your AVS with.  [See AVS documentation fo
 
 ---
 
-### Number of Hosts
+### Identify - Number of Hosts
 How many hosts will you build out the AVS cluster with.  The minimum node count is 3, maximum is 16 per cluster.  See [this link](https://docs.microsoft.com/en-us/azure/azure-vmware/concepts-private-clouds-clusters#clusters) for more details.
 
 ---
 
-### vCenter Admin Password
+### Identify - vCenter Admin Password
 During the deployment you will be prompted to define the vCenter admin password.
 
-### NSX Admin Password
+---
+
+### Identify - NSX Admin Password
 During the deployment you will be prompted to define the NSX admin password.
+
+---
 
 ### Azure vNet To Attach AVS
 To access your AVS private cloud the Express Route which comes with AVS will need to attach to an Azure vNet.  During deployment you can define a new vNet or choose an existing vNet and then during the AVS deployment the Express Route from AVS will be connected to an Express Route Gateway on the vNet defined during deployment.  It is important to note that if you choose an existing vNet you need to select one which does not have a pre-existing Gateway Subnet.  
