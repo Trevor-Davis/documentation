@@ -120,6 +120,7 @@ Either way, document what you want to do in this step.
 ![](/avsexr.png)
 
 ## Deployment and Configuration of AVS Platform
+In this section we will be taking the information collected [in the previous section](/production-ready-deployment-steps.md#planning) and using it to depoloy the Azure VMware Solution Private Cloud.
 
 ### Register the AVS Resource Provider
 Follow [the steps shown in this link](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-create-private-cloud#register-the-resource-provider) to register the resource provider for AVS with your subscription.
