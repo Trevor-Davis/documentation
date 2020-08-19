@@ -54,7 +54,7 @@ A /29 non-overlapping network address block for the ExpressRoute Global Reach pe
 
 **Example:** 10.1.0.0/29
 
-![](/privatecloud--3.png)
+![](/grip.png)
 
 ---
 
