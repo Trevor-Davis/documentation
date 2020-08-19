@@ -126,7 +126,7 @@ In this section we will be taking the information collected [in the previous sec
 Follow [the steps shown in this link](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-create-private-cloud#register-the-resource-provider) to register the resource provider for AVS with your subscription.
 
 ### Deploy AVS
-Take the information you collected from the [Planning section](/production-ready-deployment-steps.md#planning) above and [deploy the AVS Private Cloud](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-create-private-cloud#create-a-private-cloud).
+Take the information you collected from the [Planning section](/production-ready-deployment-steps.md#planning) above and [deploy the AVS Private Cloud](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-create-private-cloud#azure-portal).
 
 **NOTE:** The person deploying AVS must be at minimum contributor level in the subscription.
 
