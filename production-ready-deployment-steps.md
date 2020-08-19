@@ -39,7 +39,7 @@ Identify a IP segment which you will use to create your first network (NSX Segme
 
 **Example:** 10.0.4.0/24
 
-![](/nsxsegments.png) 
+![](/nsxsegment.png) 
 
 ---
 
