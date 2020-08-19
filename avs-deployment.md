@@ -16,6 +16,8 @@ Take the information you collected from the [Planning section](/production-ready
 
 **NOTE:** The person deploying AVS must be at minimum contributor level in the subscription.
 
+For an end to end overview of this step you can view this video. [LINK TO BE INSERTED]
+
 ### Create AVS Jumpbox
 
 When the AVS private cloud completes deployment you will need a virtual machine in the vNet where AVS connects so you can reach vCenter and NSX.  Typically this jumpbox will not be needed once all the networking is configured (express route to/from on-premises and global reach).  But until then it is a handy tool to have so you can reach vCenter and NSX in AVS.  
