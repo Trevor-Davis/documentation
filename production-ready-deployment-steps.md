@@ -101,14 +101,23 @@ During the deployment you will be prompted to define the NSX admin password.
 ---
 
 ### Azure vNet To Attach AVS
-To access your AVS private cloud the Express Route which comes with AVS will need to attach to an Azure vNet.  During deployment you can define a new vNet or choose an existing vNet and then during the AVS deployment the Express Route from AVS will be connected to an Express Route Gateway on the vNet defined during deployment.  It is important to note that if you choose an existing vNet you need to select one which does not have a pre-existing Gateway Subnet.  
+To access your AVS private cloud the Express Route which comes with AVS will need to attach to an Azure vNet.  
 
-If you want to connect the Express Route from AVS to an existing Express Route Gateway, this can be done after deployment.  If you want to do this, then do not specify an Azure vNet during deployment.
+During deployment you can define a new vNet or choose an existing vNet and then during the AVS deployment the Express Route from AVS will be connected to an Express Route Gateway on the vNet defined during deployment.  
+
+It is important to note that if you choose an existing vNet you need to select one which does not have a pre-existing Gateway Subnet.  
+
+If you want to connect the Express Route from AVS to an existing Express Route Gateway, this can be done after deployment.  
 
 So in summary, do you want to connect AVS to an existing Express Route Gateway?  
-Yes = Do not fill in this section.  
-No = either identify an existing vNet or create a new vNet.
-Remember, this vNet will be seen by your on-premises environment and AVS so make sure whatever IP segment is used in this vNet and subnets do not overlap.
+Yes = Identify the vNet for planning purposes, but during deployment this will not be used.
+No = Identify an existing vNet or create a new vNet a new vNet during deployment.
+
+Either way, document what you want to do in this step.
+
+**NOTE:**  This vNet will be seen by your on-premises environment and AVS so make sure whatever IP segment is used in this vNet and subnets do not overlap.
+
+![](/avsexr.png)
 
 ## Deployment and Configuration of AVS Platform
 
