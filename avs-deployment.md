@@ -16,7 +16,9 @@ Take the information you collected in the [Planning section](/production-ready-d
 
 **NOTE:** The person deploying AVS must be at minimum contributor level in the subscription.
 
-For an end to end overview of this step you can [view this video](https://github.com/tredavismicrosoft/documentation/raw/master/avsdeploy.mp4).
+For an end to end overview of this step you can [view this video](https://github.com/tredavismicrosoft/documentation/raw/master/avsdeploy.mp4)
+
+[![Audi R8](http://img.youtube.com/vi/KOxbO0EI4MA/0.jpg)](https://www.youtube.com/watch?v=KOxbO0EI4MA "Audi R8")
 
 
 
