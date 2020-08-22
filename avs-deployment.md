@@ -18,7 +18,7 @@ Take the information you collected in the [Planning section](/production-ready-d
 
 For an end to end overview of this step you can view this video.
 
-[![Azure VMware Solution Deployment](https://github.com/tredavismicrosoft/documentation/blob/master/avsdeploy.png)](https://youtu.be/1JLB3L2WDWI "Azure VMware Solution Deployment")
+[![Azure VMware Solution Deployment](https://github.com/tredavismicrosoft/documentation/blob/master/deploy.png)](https://youtu.be/1JLB3L2WDWI "Azure VMware Solution Deployment")
 
 ### Create AVS Jumpbox
 
