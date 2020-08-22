@@ -18,9 +18,7 @@ Take the information you collected in the [Planning section](/production-ready-d
 
 For an end to end overview of this step you can view this video.
 
-[![Audi R8](http://img.youtube.com/vi/KOxbO0EI4MA/0.jpg)](https://www.youtube.com/watch?v=KOxbO0EI4MA "Audi R8")
-
-[![Azure VMware Solution Deployment](https://res.cloudinary.com/marcomontalbano/image/upload/v1598111057/video_to_markdown/images/youtube--1JLB3L2WDWI-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/1JLB3L2WDWI "Azure VMware Solution Deployment")
+[![Azure VMware Solution Deployment](https://github.com/tredavismicrosoft/documentation/blob/master/avsdeploy.png))](https://youtu.be/1JLB3L2WDWI "Azure VMware Solution Deployment")
 
 ### Create AVS Jumpbox
 
