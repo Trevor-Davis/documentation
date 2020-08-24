@@ -24,7 +24,9 @@ For an end to end overview of this step you can view this video.
 
 When the AVS private cloud completes deployment you will need a virtual machine in the vNet where AVS connects so you can reach vCenter and NSX.  Typically this jumpbox will not be needed once all the networking is configured (express route to/from on-premises and global reach).  But until then it is a handy tool to have so you can reach vCenter and NSX in AVS.  
 
-Here are instructions on how to create a [virtual machine in Azure](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-access-private-cloud#create-a-new-windows-virtual-machine).  You will want to create this virtual machine in whatever vNet you have [identified and/or created as part of the deployment process](/production-ready-deployment-steps.md#azure-vnet-to-attach-avs).
+Here are instructions on how to create a [virtual machine in Azure](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-access-private-cloud#create-a-new-windows-virtual-machine).  
+
+You will want to create this virtual machine in whatever vNet you have [identified and/or created as part of the deployment process](/production-ready-deployment-steps.md#azure-vnet-to-attach-avs).
 
 ### Connect AVS to vNet with Express Route 
 If you did not define a vNet in the [deployment step](/production-ready-deployment-steps.md/#deploy-avs) and your intent is to connect the AVS Express Route to an existing Express Route Gateway then follow [steps 1-4 in this section](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-configure-networking#connect-expressroute-to-the-virtual-network-gateway), then move to the next section.
@@ -91,30 +93,10 @@ Log into the virtual machine you created in the previous step.  Verify connectiv
 
 --- 
 
-## Connect AVS to Your On-Premises Environment
-To do this there are [three pre-requistes](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud#prerequisites) - 
+## Next steps
 
-1. You have established connectivity to/from AVS and Azure vNets.  If you have gotten this far, this should be complete.  
-2. Have an Express Route from your on-premises environment to Azure.
-3. A /29 non-overlapping network address block for the ExpressRoute Global Reach peering (you should have [defined this already](/production-ready-deployment-steps.md/#global-reach-peering) as part of the planning phase).
+Now that all the needed information is documented/gathered, continue to the next section to create your AVS private cloud.
 
-**NOTE:** You can connect via VPN, but that is out of scope for this kickstart document.
+> [!div class="nextstepaction"]
+> [Tutorial: Deploy AVS](avstoonprem.md)
 
-### Establish Global Reach Connection
-Follow [these instructions](https://docs.microsoft.com/en-us/azure/azure-vmware/tutorial-expressroute-global-reach-private-cloud) to establish on-premises connectivity to/from AVS by configuring Global Reach.
-
-### Verify On-Premises Network Connectivity
-You should now see in your on-premises edge router where the Express Route connects the NSX-T network segments and the AVS management segments in the route tables.
-
-Everyone's environment will be different, some need to allow these routes to propagate back into the greater on-premises network, some will not.  Some will have firewalls protecting the Express Route, some will not.  Assuming no firewalls and no route pruning is occurring you should at this point be able to ping from your on-premises environment the vCenter server in AVS and the [virtual machine](/production-ready-deployment-steps.md/#put-a-virtual-machine-on-the-nsx-t-network-segment) you put on the NSX-T segment.  
-
-Additionally, from the virtual machine on the NSX-T segment you should be able to reach resources in your on-premises environment.
-
-
-## Deployment and Configuration of HCX for Network Extension and/or Workload Migration
-
-### Active HCX in AVS
-... insert info here ...
-
-### Deploy and Configure HCX On-Premises
-... insert info here ...
