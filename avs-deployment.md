@@ -98,5 +98,5 @@ Log into the virtual machine you created in the previous step.  Verify connectiv
 Now that all the needed information is documented/gathered, continue to the next section to create your AVS private cloud.
 
 > [!div class="nextstepaction"]
-> [Tutorial: Deploy AVS](avstoonprem.md)
+> [Tutorial: Connect AVS To On-Premesis](avstoonprem.md)
 
