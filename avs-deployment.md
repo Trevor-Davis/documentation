@@ -95,8 +95,7 @@ Log into the virtual machine you created in the previous step.  Verify connectiv
 
 ## Next steps
 
-Now that all the needed information is documented/gathered, continue to the next section to create your AVS private cloud.
-
+In the next section we will connect AVS to your on-premesis network via Express Route
 > [!div class="nextstepaction"]
 > [Tutorial: Connect AVS To On-Premesis](avstoonprem.md)
 
