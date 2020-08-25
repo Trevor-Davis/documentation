@@ -18,10 +18,9 @@ Everyone's environment will be different, some need to allow these routes to pro
 Additionally, from the virtual machine on the NSX-T segment you should be able to reach resources in your on-premises environment.
 
 
-## Deployment and Configuration of HCX for Network Extension and/or Workload Migration
+## Next steps
 
-### Active HCX in AVS
-... insert info here ...
+Continue to the next section to deploy and configure HCX
 
-### Deploy and Configure HCX On-Premises
-... insert info here ...
+> [!div class="nextstepaction"]
+> [Tutorial: Deploy and Configure HCX](hcx.md)
